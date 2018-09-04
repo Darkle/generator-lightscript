@@ -1,0 +1,1 @@
+# yeoman-lightscript-generator
