@@ -29,7 +29,6 @@ module.exports = class extends Generator {
     const backendDir = path.join(appDir, 'backend')
     const frontendDir = path.join(appDir, 'frontend')
     const isLightScriptFork = this.props.lightscriptVersion === '@oigroup/LightScript (Fork)'
-
     this.fs.copy(
       this.templatePath('.gitattributes'),
       this.destinationPath('.gitattributes')
@@ -46,7 +45,6 @@ module.exports = class extends Generator {
       this.templatePath(chooseWebpackConfig[platform].srcFileName),
       this.destinationPath('webpack.config.js')
     )
-
     if(platform === 'Web'){
       this.fs.copy(
         this.templatePath('appMainWeb.lsc'),
@@ -69,7 +67,6 @@ module.exports = class extends Generator {
         path.join(frontendDir, 'frontendAppMain.lsc')
       )
     }
-
     // Extend or create package.json file in destination path
     this.fs.extendJSON(
       this.destinationPath('package.json'),

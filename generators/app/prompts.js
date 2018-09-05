@@ -110,14 +110,14 @@ const prompts = [
       props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
-    type: 'checkbox',
+    type: 'confirm',
     store: true,
     name: 'extendedPatternMatching',
     message: "Enable enhanced patternMatching? (Test and branch using `match` keyword - Experimental (Stage: 1))",
     default: false,
     when: (props) =>
       props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
-  },
+  }
 ]
 
 module.exports = prompts
