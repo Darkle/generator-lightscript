@@ -57,7 +57,7 @@ const frontendWebpackOptions = {
     path: frontendDir
   },
   optimization: {
-    minimize: ISDEV
+    minimize: !ISDEV
   }
 }
 
