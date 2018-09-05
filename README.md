@@ -1,6 +1,6 @@
 # Yeoman LightScript Generator
 
-This is a [Yeoman](http://yeoman.io/) LightScript generator that scaffolds out a LightScript JS application.
+This is a [Yeoman](http://yeoman.io/) [LightScript](http://www.lightscript.org/docs/) generator that scaffolds out a LightScript JS application.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ This is a [Yeoman](http://yeoman.io/) LightScript generator that scaffolds out a
 
 ## Aditional Info
 
-  * The generator will allow you to select either Lightscript original or the @oigroup/LightScript fork.
+  * The generator will allow you to select either [LightScript original](http://www.lightscript.org/docs/) or the [@oigroup/LightScript fork](https://wcjohnson.github.io/lightscript/docs/).
 
   * You can specify the target, either 'Web', 'Node.js' or 'Both'.
 
