@@ -1,6 +1,6 @@
 # Yeoman LightScript Generator
 
-This is a Yeoman [LightScript](http://www.lightscript.org/docs/) generator that scaffolds out a LightScript JS application.
+This is a Yeoman LightScript generator that scaffolds out a [LightScript](http://www.lightscript.org/docs/) JS application.
 
 ## Getting Started
 
