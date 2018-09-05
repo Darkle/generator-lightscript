@@ -37,42 +37,7 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
-  },
   "scripts": {
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
-    "test": "jest"
   },
   "repository": "https://github.com/Darkle/generator-lightscript.git",
   "license": "MIT"

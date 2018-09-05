@@ -26,9 +26,16 @@ const prompts = [
     type: 'confirm',
     store: true,
     name: 'setCompilerOptions',
-    message: 'Would you like to specify any LightScript compiler options?',
+    message: 'Would you like to configure any LightScript compiler options? (optional)',
     default: false,
-    when: (props) => props.lightscriptVersion === '@oigroup/LightScript (Fork)'
+  },
+  {
+    type: 'confirm',
+    store: true,
+    name: 'stdlib',
+    message: 'Enable stdlib? (LightScript can make all of Lodash available to be imported as needed. This is known as the "Standard Library" in Lightscript)',
+    default: true,
+    when: (props) => props.setCompilerOptions
   },
   {
     type: 'confirm',
@@ -36,7 +43,8 @@ const prompts = [
     name: 'bangCall',
     message: 'Enable bangCall? (Call functions with paren-free syntax using `!`)',
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -44,7 +52,8 @@ const prompts = [
     name: 'safeCall',
     message: 'Enable safeCall? (Call a function using `?` to check callability first)',
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -52,7 +61,8 @@ const prompts = [
     name: 'existential',
     message: 'Enable existential? (Postfix `?` checks that an expression is not loose-equal to `null`)',
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -60,7 +70,8 @@ const prompts = [
     name: 'useRequire',
     message: 'Enable useRequire? (Generate `require` rather than `import` when the compiler introduces a module)',
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -68,7 +79,8 @@ const prompts = [
     name: 'flippedImports',
     message: "Enable flippedImports? (Allow imports via `import 'path': [specifier]` syntax)",
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -76,7 +88,8 @@ const prompts = [
     name: 'disableJsx',
     message: `Enable disableJsx? (Don't parse JSX expressions)`,
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -84,7 +97,8 @@ const prompts = [
     name: 'disableFlow',
     message: `Enable disableFlow? (Don't parse Flow type annotations)`,
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'confirm',
@@ -92,7 +106,8 @@ const prompts = [
     name: 'placeholderArgs',
     message: `Enable placeholderArgs? (Specify arguments for a function using placeholders in the body)`,
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
   {
     type: 'checkbox',
@@ -100,7 +115,8 @@ const prompts = [
     name: 'patternMatching',
     message: "Enable enhanced patternMatching? (Test and branch using `match` keyword - Experimental (Stage: 1))",
     default: false,
-    when: (props) => props.setCompilerOptions
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
   },
 ]
 
