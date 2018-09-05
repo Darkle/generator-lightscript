@@ -29,6 +29,7 @@ module.exports = class extends Generator {
     const backendDir = path.join(appDir, 'backend')
     const frontendDir = path.join(appDir, 'frontend')
     const isLightScriptFork = this.props.lightscriptVersion === '@oigroup/LightScript (Fork)'
+
     this.fs.copy(
       this.templatePath('.gitattributes'),
       this.destinationPath('.gitattributes')

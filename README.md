@@ -10,6 +10,8 @@ This is a Yeoman [LightScript](http://www.lightscript.org/docs/) generator that 
 
   3. Run `yo lightscript` in your project directory
 
+  4. Run `npm run ww` to start webpack watch
+
 
 ## Aditional Info
 
