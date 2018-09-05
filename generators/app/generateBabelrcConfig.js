@@ -1,10 +1,12 @@
 
 
 function generateBabelrcConfig(props, isLightScriptFork){
+  const patternMatching = props.extendedPatternMatching ? 'enhanced' : 'default'
+
   if(typeof props.stdlib === 'undefined'){
     props.stdlib = true
   }
-  const patternMatching = props.extendedPatternMatching ? 'enhanced' : 'default'
+
   if(isLightScriptFork){
     return {
       "presets": [
@@ -29,7 +31,10 @@ function generateBabelrcConfig(props, isLightScriptFork){
   return {
     "presets": [
       [
-        'babel-preset-lightscript'
+        'babel-preset-lightscript',
+        {
+          "stdlib": props.stdlib
+        }
       ]
     ]
   }

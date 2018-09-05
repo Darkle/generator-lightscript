@@ -78,7 +78,7 @@ module.exports = class extends Generator {
         ...{
           devDependencies: {
             // Things tend to break if we use a higher version of eslint.
-            eslint: isLightScriptFork ? '=4.8.0' : '=3.18.0',
+            "eslint": isLightScriptFork ? '=4.8.0' : '=3.18.0',
             "babel-core": "^6.26.3",
             "babel-loader": "^7.1.5",
           }
@@ -99,7 +99,10 @@ module.exports = class extends Generator {
     this.npmInstall(
       [
         ...lightscriptNpmVersion[this.props.lightscriptVersion],
+        'eslint',
         'cross-env',
+        'babel-core',
+        'babel-loader',
         'webpack',
         'webpack-cli',
         ...npmLibsForTargetingNode(this.props.platform),
