@@ -112,7 +112,7 @@ const prompts = [
   {
     type: 'checkbox',
     store: true,
-    name: 'patternMatching',
+    name: 'extendedPatternMatching',
     message: "Enable enhanced patternMatching? (Test and branch using `match` keyword - Experimental (Stage: 1))",
     default: false,
     when: (props) =>

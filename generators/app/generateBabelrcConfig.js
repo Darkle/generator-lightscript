@@ -4,7 +4,7 @@ function generateBabelrcConfig(props, isLightScriptFork){
   if(typeof props.stdlib === 'undefined'){
     props.stdlib = true
   }
-  props.patternMatching = props.patternMatching ? 'default' : 'enhanced'
+  const patternMatching = props.extendedPatternMatching ? 'enhanced' : 'default'
   if(isLightScriptFork){
     return {
       "presets": [
@@ -20,7 +20,7 @@ function generateBabelrcConfig(props, isLightScriptFork){
             "disableJsx": !!props.disableJsx,
             "disableFlow": !!props.disableFlow,
             "placeholderArgs": !!props.placeholderArgs,
-            "patternMatching": props.patternMatching
+            patternMatching
           }
         ]
       ]
