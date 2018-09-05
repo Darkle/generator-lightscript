@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Coop",
+      "authorEmail": "coop.coding@gmail.com",
+      "authorUrl": "https://github.com/Darkle/"
+    }
+  }
+}
