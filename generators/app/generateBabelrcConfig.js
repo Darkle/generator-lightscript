@@ -15,6 +15,7 @@ function generateBabelrcConfig(props, isLightScriptFork){
             "bangCall": !!props.bangCall,
             "safeCall": !!props.safeCall,
             "existential": !!props.existential,
+            "noEnforcedSubscriptIndentation": !!props.noEnforcedSubscriptIndentation,
             "useRequire": !!props.useRequire,
             "flippedImports": !!props.flippedImports,
             "disableJsx": !!props.disableJsx,

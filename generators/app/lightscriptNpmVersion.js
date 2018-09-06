@@ -6,6 +6,7 @@ const lightscriptNpmVersion = {
   '@oigroup/LightScript (Fork)': [
     '@oigroup/babel-preset-lightscript',
     '@oigroup/lightscript-eslint',
+    '@oigroup/lightscript-runtime',
   ]
 }
 

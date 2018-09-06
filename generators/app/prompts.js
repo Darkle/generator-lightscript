@@ -67,6 +67,15 @@ const prompts = [
   {
     type: 'confirm',
     store: true,
+    name: 'noEnforcedSubscriptIndentation',
+    message: 'Enable noEnforcedSubscriptIndentation? (Do not enforce indentation for subscripts on subsequent lines)',
+    default: false,
+    when: (props) =>
+      props.setCompilerOptions && props.lightscriptVersion === '@oigroup/LightScript (Fork)'
+  },
+  {
+    type: 'confirm',
+    store: true,
     name: 'useRequire',
     message: 'Enable useRequire? (Generate `require` rather than `import` when the compiler introduces a module)',
     default: false,

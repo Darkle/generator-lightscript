@@ -74,6 +74,9 @@ module.exports = class extends Generator {
       {
         ...packageJsonScriptTasks(platform),
         ...{
+          name: "",
+          version: "0.0.1",
+          description: "",
           devDependencies: {
             // Things tend to break if we use a higher version of eslint.
             "eslint": isLightScriptFork ? '=4.8.0' : '=3.18.0',
