@@ -78,8 +78,6 @@ module.exports = class extends Generator {
           version: "0.0.1",
           description: "",
           devDependencies: {
-            // Things tend to break if we use a higher version of eslint.
-            "eslint": isLightScriptFork ? '=4.8.0' : '=3.18.0',
             "babel-core": "^6.26.3",
             "babel-loader": "^7.1.5",
           }
@@ -97,10 +95,12 @@ module.exports = class extends Generator {
   }
 
   install() {
+    const isLightScriptFork = this.props.lightscriptVersion === '@oigroup/LightScript (Fork)'
     this.npmInstall(
       [
         ...lightscriptNpmVersion[this.props.lightscriptVersion],
-        'eslint',
+        // Things tend to break if we use a higher version of eslint.
+        isLightScriptFork ? 'eslint@4.8.0' : 'eslint@3.18.0',
         'cross-env',
         'babel-core',
         'babel-loader',

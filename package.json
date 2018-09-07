@@ -1,6 +1,6 @@
 {
   "name": "generator-lightscript",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A Yeoman generator for scaffolding out a new LightScript JS app.",
   "homepage": "https://github.com/Darkle/generator-lightscript",
   "author": {
@@ -37,8 +37,7 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": "https://github.com/Darkle/generator-lightscript.git",
   "license": "MIT"
 }
