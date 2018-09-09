@@ -15,7 +15,7 @@ const chooseWebpackConfig = require('./chooseWebpackConfig.js')
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    this.log(yosay(`Welcome to the ${chalk.red('generator-lightscript')} generator`))
+    this.log(yosay(`Welcome to the ${chalk.red('lightscript')} generator`))
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer
