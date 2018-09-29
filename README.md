@@ -1,5 +1,7 @@
 # Yeoman LightScript Generator
 
+### Note: this has been depricated, use this instead: https://github.com/Darkle/create-lightscript-app
+
 This is a Yeoman LightScript generator that scaffolds out a [LightScript](http://www.lightscript.org/docs/) JS application.
 
 ## Getting Started
